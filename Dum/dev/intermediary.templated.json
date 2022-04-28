@@ -1,0 +1,57 @@
+{
+    "name": "DummyService1",
+    "3la": "dum",
+    "2la": "du",
+    "ON_PREM_ENV": "DEV",
+    "backend":{
+        "serverTemplates":[
+            "app{env}{region}{3la}01",
+            "app{env}{region}{3la}02"
+        ],
+        "servers":[
+            "appdevweudum01",
+            "appdevweudum02"
+        ],
+        "services":[
+            {
+                "name": "LaiService",
+                "serviceName":"LaiService",
+                "domainPrefix": "laiservice",
+                "description": "lai's dummy service",
+                "urlTemplate": "{domainPrefix}.{3la}{envOrBlank}.dummyinsight.com",
+                "url": "laiservice.dum.dummyinvestment.com",
+                "port": 1234,
+                "calls":[],
+                "runsOnServiers":[1,2],
+                "runsOnServersTemplate":"app{env}{region}{3la}{nn}",
+                "runsOn":["appdevweudum01",
+                "appdevweudum02"],
+                "adGroupTemplate": "USR {ServiceName} {RO|RW} {ENV_OR_BLANK}",
+                "roleMiddleName":"LAI",
+                "permissions": ["RO", "RW"],
+                "roles":[
+                    {
+                        "name":"USR-LAI-RO",
+                        "description":"some descrition ro...",
+                        "adGroup":"USR LaiService RO"
+                    },
+                    {
+                        "name":"USR-LAI-Rw",
+                        "description":"some descrition rw...",
+                        "adGroup":"USR LaiService Rw"
+                    }
+                ],
+                "sqlServerDatabase":{
+                    "NameTemplate":"{Env}{ServiceName}",
+                    "name": "DevLaiService",
+                    "availablilityGroupListenerTemplate":{
+                        "default":"app{env}d{2la}agl",
+                        "dev":"[none]}"
+                    },
+                    "sysRoleMiddleName":"LaiService"
+                },
+                "adGroupFile": "lai-service-adgroups.json"
+            }
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "ADM TeamOneProj {ENV_OR_BLANK}",
+        "description": "Provide admin access to TeamOneProj databases",
+        "owner-dev": "LaiW",
+        "owner-dde": "VenuM",
+        "owner-uat": "WesB",
+        "owner-prd": "SantV",
+        "dev":["Team One Support DEV"],
+        "dde":["Team One Support DDE"],
+        "uat":["Team One Support UAT"],
+        "prd":["Team One Support PRD 1", "Team One Support PRD 2"]
+    },
+    {
+        "name": "QRY TeamOneProj {ENV_OR_BLANK}",
+        "description": "Provide query access to TeamOneProj databases",
+        "owner-dev": "LaiW",
+        "owner-dde": "VenuM",
+        "owner-uat": "WesB",
+        "owner-prd": "SantV",
+        "dev":["Team One Support DEV"],
+        "dde":["Team One Support DDE 1", "Team One Support DDE 2"],
+        "uat":["Team One Support UAT"],
+        "prd":["Team One Support PRD"]
+    }
+]

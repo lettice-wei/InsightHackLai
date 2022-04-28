@@ -1,0 +1,25 @@
+{
+    "name": "DummyService1",
+    "3la": "dum",
+    "2la": "du",
+    "servers": 2,
+    "uis":[],
+    "backend":{
+        "services":[
+            {
+                "name": "LaiService",
+                "domainPrefix": "laiservice",
+                "description": "lai's dummy service",
+                "port": 1234,
+                "calls":[],
+                "runsOnServiers":[1,2],
+                "roleMiddleName": "LPS",
+                "permissions": ["RO", "RW"],
+                "sqlServerDatabase":{
+                    "sysRoleMiddleName":"LaiService"
+                },
+                "adGroupFile": "lai-service-adgroups.json"
+            }
+        ]
+    }
+}
